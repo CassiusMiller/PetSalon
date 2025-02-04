@@ -1,5 +1,15 @@
 console.log("test");//make sure i linked it correctly
 //add 3 pets
+let petSalon = {
+    name: "Clean pets",
+    address: {
+        street:"1213 f st.",
+        street2: "unit 100",
+        city: "San Diego",
+        state:"Ca",
+        zip: "92101-0100"
+    }
+}
 let pet1={
     Name: "Spike",
     Age: 3,
