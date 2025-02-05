@@ -1,7 +1,7 @@
 console.log("test");//make sure i linked it correctly
 //add 3 pets
 let petSalon = {
-    name: "Clean pets",
+    name: "Clean Pets",
     address: {
         street:"1213 f st.",
         street2: "unit 100",

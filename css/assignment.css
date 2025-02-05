@@ -46,5 +46,17 @@ footer{
 }
 
 .form-container{
-    
+
+}
+.button1{
+    border-radius: 20%;
+    background-color: darkgray;
+    text-size-adjust: 20px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.wrap{
+    text-align: center;
+    text-wrap: 50px;
 }
