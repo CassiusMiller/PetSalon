@@ -1,7 +1,7 @@
 console.log("test");//make sure i linked it correctly
 //add 3 pets
 let petSalon = {
-    name: "Clean Pets",
+    name: "Clean Pet",
     address: {
         street:"1213 f st.",
         street2: "unit 100",
@@ -37,15 +37,39 @@ function clearInputs() {
 function register() {
     let newPet = new pet(petName.value, petAge.value, petGender.value, petBreed.value, petService.value);
     petList.push(newPet)
+    console.log(petList);
     clearInputs();
+
 }
 
 function init() {
     let pet1= new pet("spike", 21, "male", "pit", "Wash");
     let pet2= new pet("Bud", 13, "male", "Retriever", "Trim");
-    let pet3= new pet("Lucky", 21, "male", "puddle", "Nails");
-
-    petList.push(pet1, pet2, pet3);
+    petList.push(pet1, pet2);
+    console.log(petList);
+    displayTable();
+    
 }
 
+function displayTable() {
+    let petRows = document.getElementById("petRows");
+    let rows="";
+    for (let i = 0; i < petList.length; i++) {
+        let pet = petList[i];
+        rows +=`
+            <tr id=${i}
+            <tb>${pet.name}</tb>
+            <tb>${pet.age}</tb>
+            <tb>${pet.gender}</tb>
+            <tb>${pet.breed}</tb>
+            <tb>${pet.service}</tb>
+        `
+    }
+    petRows.innerHTML=rows;
+}
+
+
+
 window.onload = init;
+
+
