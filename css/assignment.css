@@ -41,9 +41,18 @@
 }
 img{
     max-width: 300px;
-    max-height: 250px;
+    max-height: 200px;
 }
 footer{
     background-color: gray;
     padding: 50px;
+}
+.index-container{
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: center;
+}
+.img-bar{
+    margin-left: 150px;
+    margin-right: 150px;
 }

@@ -1,6 +1,6 @@
 let petList=[];
-console.log("test");//make sure i linked it correctly
-//add 3 pets
+console.log("test");
+
 let petSalon = {
 	name: "Clean Pet",
 	address: {
@@ -49,6 +49,17 @@ function register() {
 
 function isValidate(pet) {
 	let validation = true;
+	petName.classList.remove("error");
+  petAge.classList.remove("error");
+	petGender.classList.remove("error");
+  petBreed.classList.remove("error");
+	petService.classList.remove("error");
+  petDate.classList.remove("error");
+	petPayment.classList.remove("error");
+	petPhone.classList.remove("error");
+
+	document.getElementById("alert-error").classList.add("hide");
+
 	if (petName==="") {
 		validation=false
 		petName.classList.add("error")
@@ -92,7 +103,6 @@ function clearInputs() {
 	petService.value="";
 	petDate.value="";
 	petPayment.value="";
-
 }
 
 function deletePet(petId){
@@ -112,7 +122,7 @@ function showAlert(msg,type){
     `;
     setTimeout(()=>{
         document.getElementById("alert-error").remove();
-    },3000);// 1000 = 1s
+    },3000);     // 1000 = 1s
 }
 
 function displayTable() {  
@@ -139,7 +149,7 @@ function displayTable() {
 		</tr>
 		`
 	}
-	petRows.innerHTML=rows;
+	petRows.innerHTML= rows;
 }
 
 function displayPet(){
@@ -147,7 +157,6 @@ function displayPet(){
 	let result = "";
 
 	for(let i=0; i<petList.length;i++){
-		//console.log(petList[i]);
 	let pet = petList[i];
 	result += `
 		<div id=${i} class="card" style="width: 18rem;">
@@ -166,32 +175,11 @@ function displayPet(){
 	
 	cardSection.innerHTML = result;
 }
+
 function displayPetsInfo(){
 	document.getElementById("petsCounter").innerHTML= "Total pets = " + petList.length;
 }
-// function displayTable(){
-//     let petRows = document.getElementById("petRows");
-//     let rows="";
-//     for(let i=0; i<petList.length;i++){
-//         let pet = petList[i];
-//         rows +=`
-//         <tr id=${i}>
-//             <td>${pet.Name}</td>
-//             <td>${pet.Age}</td>
-//             <td>${pet.Gender}</td>
-//             <td>${pet.Breed}</td>
-//             <td>${pet.Service}</td>
-//             <tb>${pet.Date}</tb>
-//             <tb>${pet.Payment}</tb>
-//             <td>
-//                 <button class="btn btn-danger btn-sm" onclick="deletePet(${i})">Delete</button>
-//                 <button class="btn btn-info btn-sm disabled">Edit</button>
-//             </td>
-//         </tr>
-//         `;
-//     }
-//     petRows.innerHTML=rows;
-// }
+
 
 
 function init() {

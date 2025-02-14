@@ -8,7 +8,7 @@
 
 </head>
 <body>
-  <header>
+	<header>
 		<nav class="navbar navbar-expand-lg bg-body-tertiary">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="/html/index.html">Clean Pet</a>
@@ -21,7 +21,7 @@
 							<a class="nav-link active" aria-current="page" href="/html/Assignment.html">Register</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Pricing</a>
+							<a class="nav-link" href="/html/services.html">Services</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Sign In</a>
@@ -30,97 +30,38 @@
 				</div>
 			</div>
 		</nav>
-	<div class="header">
-		<h1>Register a New Pet</h1>
-	</div>
+		<div class="header">
+			<h1>Welcome to Clean Pets</h1>
+		</div>
 	</header>
 
 	<main class="container">
 		<div>
-			<h2>Register a new pet</h2>
+			<h2>Register a New Service</h2>
 			<div id="alertContainer">
 
 			</div>
 
-			<div id="alert-error" class="alert alert-danger hide" role="alert">
-				Please, add all the information required!
-			</div>
-
-      <div class="form-container">
+			<div>
         <div class="mb-3">
-          <label>Name:</label>
-          <input class="form-control" type="text" id="txtName" />
+            <label>Title</label>
+            <input type="text" id="txtTitle">
+            <small id="nameRequirementText">This field is required.</small>
         </div>
         <div class="mb-3">
-          <label>Age:</label>
-          <input class="form-control" type="number" id="txtAge" min="0"/>
-				</div>
-				<div class="mb-3">
-					<label>Gender:</label>
-					<select class="form-select" id="txtGender">
-						<option value="" disabled selected>---Select a Gender---</option>
-						<option value="Male">Male</option>
-						<option value="Female">Female</option>
-					</select>
-				</div>
-        <div class="mb-3">
-          <label>Breed:</label>
-            <input class="form-control" type="text" id="txtBreed" />
+            <label>Price:</label>
+            <input type="number" id="txtPrice">
+            <small id="priceRequirementText">This field is required.</small>
         </div>
-				<div class="mb-3">
-					<label>Service:</label>
-					<select class="form-select" id="txtService">
-						<option value="" disabled selected>---Select a Service---</option>
-						<option value="Grooming">Grooming</option>
-						<option value="Vaccines">Vaccines</option>
-						<option value="Nails">Nails</option>
-					</select>
-				</div>
-				<div class="mb-3">
-					<label>Date:</label>
-					<input type="date" name="date" id="txtDate">
-				</div>
-				<div class="mb-3">
-					<label for="phone number">Phone number:</label>
-					<input class="form-control" type="number" id="txtPhone" />
-				</div>
-				<div class="mb-3">
-					<label>Payment Method:</label>
-					<select class="form-select" id="txtPayment">
-						<option value="" disabled selected>---Select a Payment Method---</option>
-						<option value="Card">Card</option>
-						<option value="Cash">Cash</option>
-						<option value="ApplePay">ApplePay</option>
-					</select>
-				</div>
-				<div>
-						<button class="btn btn-primary" onclick="register()">Register</button>
-				</div>
-            </div>
+        <div>
+            <button id="btnRegister">Register</button>
+        </div>
     </div>
-
-    <section class="container">
-      <h2>Registered pets</h2>
-  	    <p id="petsCounter"></p>
-      <div id="petNames"></div>
-      <table class="table">
-        <thead>
-					<th>Name</th>
-					<th>Age</th>
-					<th>Gender</th>
-					<th>Breed</th>
-					<th>Service</th>
-					<th>Date</th>
-					<th>Payment</th>
-					<th>Actions</th>
-        </thead>
-        <tbody id="petRows">
-        </tbody>
-      </table>
-    </section>
+		
   </main>
 
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="/scripts/stormanager.js"></script>
   <script src="/scripts/services.js"></script>
 </body>
 </html>

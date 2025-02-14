@@ -7,7 +7,7 @@ console.log("test");
 //js
 let htmlElemnt= document.getElementById("results")
 //jQuery
-jQuery("#results")
+("#results")
 htmlElemnt= $("#results")
 
 //select by Tag
