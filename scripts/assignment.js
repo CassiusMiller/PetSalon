@@ -60,35 +60,35 @@ function isValidate(pet) {
 
 	document.getElementById("alert-error").classList.add("hide");
 
-	if (petName==="") {
+	if (pet.Name==="") {
 		validation=false
 		petName.classList.add("error")
 	}
-	if (petAge==="") {
+	if (pet.Age==="") {
 		validation=false
 		petAge.classList.add("error")
 	}
-	if (petGender==="---Select a Gender---") {
+	if (pet.Gender==="---Select a Gender---") {
 		validation=false
 		petGender.classList.add("error")
 	}
-	if (petBreed==="") {
+	if (pet.Breed==="") {
 		validation=false
 		petBreed.classList.add("error")
 	}
-	if (petService==="---Select a Service---") {
+	if (pet.Service==="---Select a Service---") {
 		validation=false
 		petService.classList.add("error")
 	}
-	if (petDate==="") {
+	if (pet.Date==="") {
 		validation=false
 		petBreed.classList.add("error")
 	}
-	if (petPayment==="") {
+	if (pet.Payment==="") {
 		validation=false
 		petBreed.classList.add("error")
 	}
-	if (petPhone==="") {
+	if (pet.Phone==="") {
 		validation=false
 		petBreed.classList.add("error")
 	}
