@@ -82,15 +82,15 @@ function isValidate(pet) {
 	}
 	if (pet.Date==="") {
 		validation=false
-		petBreed.classList.add("error")
+		petDate.classList.add("error")
 	}
 	if (pet.Payment==="") {
 		validation=false
-		petBreed.classList.add("error")
+		petPayment.classList.add("error")
 	}
 	if (pet.Phone==="") {
 		validation=false
-		petBreed.classList.add("error")
+		petPhone.classList.add("error")
 	}
 	return validation;
 }
