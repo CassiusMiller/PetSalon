@@ -3,34 +3,50 @@ function Service(name, price) {
 	this.price=price
 }
 
-function validService() {
-	if (condition) {
-		
+function validService(service){
+	let isValidTitle = true;
+	let isValidPrice = true;
+
+	if(service.title==""){
+			isValidTitle=false;
+			$("#txtTitle").css("border","1px solid red");
+			$("#titleRequirementText").show().css("color","red");
+	}else{
+			$("#txtTitle").css("border","1px solid black");
+			$("#titleRequirementText").hide();
+	}
+
+	if(service.price==""){
+			isValidPrice=false;
+			$("#txtPrice").css("border","1px solid red");
+			$("#priceRequirementText").show().css("color","red");
+	}else{
+			$("#txtPrice").css("border","1px solid black");
+			$("#priceRequirementText").hide();
+	}
+
+	return isValidTitle && isValidPrice;
+}
+
+function register(){
+	// get the values from the inputs
+	let inputTitle=$("#txtTitle").val();
+	let inputPrice=$("#txtPrice").val();
+
+	let newService = new Service(inputTitle,inputPrice);
+	if(validService(newService)==true){
+			console.log("My service is valid");
+			saveService(newService);// fn in SM
 	}
 }
 
-function register() {
-	console.log();
-}
-function signIn(){
-	let login = false;
-	alert("This page is restricted to Employees only.");
-	let userName = prompt("User Name");
-	let password = prompt("Password");
-	if (userName.value === "C.Miller"){
-		login = true
-		
-	}
-	if (password = 12345){
-		login =	true
-	}
-	return login;
+function init(){
+	//event handler
+	$("#btnRegister").on("click",register);
+	
+	$("#titleRequirementText").hide();
+	$("#priceRequirementText").hide();
+
 }
 
-function init() {
-	$("#btnRegister").on("click",register)
-	let service = new Service("grooming", 50);
-	let service2 = new Service("vacines", 150);
-	signIn();
-}
-window.onload=init
+window.onload=init;
